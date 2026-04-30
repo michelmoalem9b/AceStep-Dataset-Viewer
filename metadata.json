@@ -1,0 +1,6 @@
+{
+  "name": "Dataset Viewer",
+  "description": "A clean, simple viewer for music metadata datasets containing lyrics, captions, and technical song details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
