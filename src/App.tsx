@@ -324,7 +324,7 @@ function SampleCard({
                     <h4 className="text-sm font-semibold uppercase tracking-wider text-[#6B7280]">Lyrics</h4>
                   </div>
                   <button 
-                    onClick={(e) => handleCopy(e, sample.lyrics)}
+                    onClick={(e) => handleCopy(e, sample.raw_lyrics || sample.lyrics)}
                     className="flex items-center gap-1.5 px-3 py-1 bg-white border border-[#E5E7EB] hover:border-[#1A1A1A] rounded-full text-xs font-medium transition-all"
                   >
                     <Copy className="w-3 h-3" />
@@ -332,11 +332,11 @@ function SampleCard({
                   </button>
                 </div>
                 <div 
-                  onClick={(e) => handleCopy(e, sample.lyrics)}
+                  onClick={(e) => handleCopy(e, sample.raw_lyrics || sample.lyrics)}
                   className="group relative p-6 bg-white border border-[#E5E7EB] rounded-2xl max-h-[400px] overflow-y-auto custom-scrollbar cursor-pointer hover:border-[#1A1A1A] transition-all"
                 >
                   <pre className="text-sm font-serif leading-relaxed text-[#1F2937] whitespace-pre-wrap">
-                    {sample.lyrics}
+                    {sample.raw_lyrics || sample.lyrics}
                   </pre>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <Copy className="w-4 h-4 text-[#9CA3AF]" />
